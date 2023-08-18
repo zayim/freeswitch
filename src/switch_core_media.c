@@ -10700,7 +10700,7 @@ SWITCH_DECLARE(void) switch_core_media_gen_local_sdp(switch_core_session_t *sess
 	if ((smh->mparams->ndlb & SM_NDLB_SENDRECV_IN_SESSION) ||
 		((var_val = switch_channel_get_variable(session->channel, "ndlb_sendrecv_in_session")) && switch_true(var_val))) {
 		switch_log_printf(SWITCH_CHANNEL_SESSION_LOG(session), SWITCH_LOG_INFO, "[NEDO] entered if\n");
-		switch_log_printf(SWITCH_CHANNEL_SESSION_LOG(session), SWITCH_LOG_INFO, "[NEDO] smh->mparams->ndlb: %s\n", smh->mparams->ndlb);
+		switch_log_printf(SWITCH_CHANNEL_SESSION_LOG(session), SWITCH_LOG_INFO, "[NEDO] smh->mparams->ndlb: %d\n", smh->mparams->ndlb);
 		if (!zstr(sr)) {
 			switch_snprintf(srbuf, sizeof(srbuf), "a=%s\r\n", sr);
 		}
